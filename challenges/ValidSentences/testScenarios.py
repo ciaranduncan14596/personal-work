@@ -45,6 +45,7 @@ class TestCaseScenarios(unittest.TestCase):
 
     def test_validate_numerals(self):
         self.assertFalse(validate_numerals('I am 1'))
+        self.assertFalse(validate_numerals(''))
         self.assertFalse(validate_numerals('I am either 1,2,3 or 4 5 6 or 7,8,9,10,11'))
         self.assertTrue(validate_numerals('I am One'))
 
